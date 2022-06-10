@@ -1,0 +1,22 @@
+adaptive_ac:
+  name: Adapt A/C
+  description: Adapt A/C to outside temperatures using python script
+  fields:
+    thermostat_entity:
+      description: Pass thermostat to be controlled here
+      example: climate.kitchen
+    outside_temperature_entity:
+      description: Pass outside temperature sensor here
+      example: sensor.outside_temperature
+    indoor_temperature_entity:
+      description: Pass inside temperature sensor here
+      example: sensor.kitchen_temperature
+    temp_diff_value:
+      description: The maximum allowed difference between indoor and outdoor temperatures
+      example: 30
+    maximum_set_temperature:
+      description: The maximum allowed temperature that you want the thermostat to be set
+      example: 78
+    target_temperature:
+      description: The minimum allowed temperature that you want the thermostat to be set
+      example: 72

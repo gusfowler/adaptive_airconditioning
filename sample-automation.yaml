@@ -1,0 +1,17 @@
+- id: '1654666106114'
+  alias: Comfort
+  description: ''
+  trigger:
+  - platform: time_pattern
+    minutes: /15            # run script every 15 minutes
+  condition: []
+  action:
+  - service: python_script.adaptive_ac
+    data:
+      thermostat_entity: climate.kitchen
+      outside_temperature_entity: sensor.outside_temp
+      indoor_temperature_entity: sensor.kitchen_temperature
+      temp_diff_value: 30             # the difference between outside temperature and what the thermostat is currently set to
+      maximum_set_temperature: 78     # maximum temperature that the script will set the thermostat to
+      target_temperature: 72          # goal / base / lowest temperature automation will set to
+  mode: single
