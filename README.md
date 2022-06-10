@@ -11,7 +11,7 @@ In your homeassistant configuration.yaml you need to have a line that is 'python
 Then in your configuration folder (usually /config), create a directory 'python_scripts' and copy 'adaptive_ac.py' and 'services.yaml' (or append the contents to your preexisting services file) into 'python_scripts'
 
 Reload HA and you should be good to go. I have provided a sample automation to get you started.
-* Note: each time the script runs, it will apply the temperature determined to be best, so if you have it run every 15 minutes, if you turn off your air conditioner without disabling your automation setup, it will turn it back on 
+* Note: each time the script runs, it will apply the temperature determined to be best, so if you have it run every 15 minutes, if you set your air conditioner manually without disabling your automation setup, it will turn it back to it's configured temperature
 
 Sources:
 https://www.home-assistant.io
